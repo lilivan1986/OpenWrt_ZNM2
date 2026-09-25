@@ -3,17 +3,6 @@
 
 echo "自定义固件版本名字"
 
-echo "修改固件名称为 ImmortalWrt"
-
-# 修改发行版名称
-sed -i "s/^DISTRIB_ID=.*/DISTRIB_ID='ImmortalWrt'/" package/base-files/files/etc/openwrt_release
-
-# 修改默认设置中的发行版名称
-sed -i "s/LibWrt/ImmortalWrt/g" package/emortal/default-settings/files/99-default-settings
-
-# 全局替换 LibWrt
-grep -RIl "LibWrt" package 2>/dev/null | xargs -r sed -i 's/LibWrt/ImmortalWrt/g'
-
 sed -i "/^\. \/etc\/openwrt_release/a\\
 sed -i '/DISTRIB_REVISION/d' /etc/openwrt_release\n\
 echo \"DISTRIB_REVISION='v\$(date +'%Y.%m.%d')'\" >> /etc/openwrt_release\n\
