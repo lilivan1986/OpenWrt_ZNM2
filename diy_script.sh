@@ -9,7 +9,7 @@ echo \"DISTRIB_REVISION='v\$(date +'%Y.%m.%d')'\" >> /etc/openwrt_release\n\
 sed -i '/DISTRIB_RELEASE/d' /etc/openwrt_release\n\
 echo \"DISTRIB_RELEASE='v\$(date +'%Y.%m.%d')'\" >> /etc/openwrt_release\n\
 sed -i '/DISTRIB_DESCRIPTION/d' /etc/openwrt_release\n\
-echo \"DISTRIB_DESCRIPTION='ImmortalWrt AutoBuild Firmware Compiled By @waynesg Build \$(TZ=UTC-8 date \"+%Y.%m.%d\") @ OpenWrt '\" >> /etc/openwrt_release
+echo \"DISTRIB_DESCRIPTION='AutoBuild Firmware Compiled By @waynesg Build \$(TZ=UTC-8 date \"+%Y.%m.%d\") @ OpenWrt '\" >> /etc/openwrt_release
 " package/emortal/default-settings/files/99-default-settings
 
 
